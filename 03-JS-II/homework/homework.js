@@ -217,20 +217,38 @@ function esVerdadero(valor){
 function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
-  //Escribe tu código aquí   
+  //Escribe tu código aquí  
+  tabaMultiplicarSeis = [0,6,12,18,24,30,36,42,48,54,60] 
+  return tabaMultiplicarSeis
   
 }
 
 function tieneTresDigitos(numero){
-  //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
+  //Leer un número entero y retornar true si tiene 3 dígitos. 
+  // Caso contrario, retorna false.
   //Escribe tu código aquí
-  
+  var n = numero.toString()
+  n = n.length 
+  if (n == 3){
+    validar = true
+  }else {
+    validar = false
+  }
+return validar
 }
 
 function doWhile(numero) {
-  //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
+  //Implementar una función tal que vaya aumentando el valor 
+  // recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
-  //Usar el bucle do ... while.
+  //Usar el bucle do ... while.}
+
+  contador = 7
+do {
+  numero + 5 
+  contador --
+  
+} while (contador > 0 );
 }
 
 
