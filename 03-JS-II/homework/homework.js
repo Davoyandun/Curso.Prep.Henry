@@ -245,10 +245,12 @@ function doWhile(numero) {
 
   contador = 7
 do {
-  numero + 5 
+  numero += 5 
   contador --
   
 } while (contador > 0 );
+
+
 }
 
 
