@@ -12,14 +12,14 @@ function devolverUltimoElemento(array) {
   // Tu código:
   recorrerFinal = array[array.length -1];
   return recorrerFinal;
-}
+};
 
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
   return array.length;
-}
+};
 
 
 function incrementarPorUno(array) {
@@ -89,7 +89,8 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
-
+var total;
+var puntajes; 
   for (let i = 0; i < resultadosTest.length; i++) {
 
 
@@ -97,7 +98,7 @@ function promedioResultadosTest(resultadosTest) {
      total += puntajes 
         
   }
-  resultado = total / resultadosTest.length
+  var  resultado = total / resultadosTest.length
 
   return resultado
 }
@@ -171,7 +172,7 @@ function empiezaConNueve(n) {
   cadena = n.toString()
   if (cadena.substr(1,1) == 9 ){
     return true 
-  } else return false
+  } else {return false}
   
 }
 
@@ -185,9 +186,9 @@ function todosIguales(arreglo) {
     } else {
       verificador = false
     }
-    return  verificador
+    
   }
-  
+  return  verificador
 } 
 
 function mesesDelAño(array) {
@@ -204,7 +205,7 @@ function mesesDelAño(array) {
 }else {
   return "No se encontraron los meses pedidos"
 }
-}
+}}
 
 
 function mayorACien(array) {
@@ -293,4 +294,4 @@ module.exports = {
   mayorACien,
   breakStatement,
   continueStatement
-};
+}
