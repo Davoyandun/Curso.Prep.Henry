@@ -28,7 +28,7 @@ const nuevoModulo = 21 % 5 === 1;
 function devolverString(str) {
   // "Return" la string provista: str
   // Tu código:
-  return "str"
+  return str
 }
 
 function suma(x, y) {
@@ -156,7 +156,8 @@ function elevar(num, exponent) {
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
-  Math.round(num)
+ num =  Math.round(num)
+ return num
 }
 
 function redondearHaciaArriba(num) {
@@ -165,6 +166,8 @@ function redondearHaciaArriba(num) {
   return Math.ceil(num)
 }
 
+
+
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
@@ -172,17 +175,21 @@ function numeroRandom() {
 }
 
 function esPositivo(numero) {
-  //La función va a recibir un entero. Devuelve como resultado una cadena de texto que indica si el número es positivo o negativo. 
+  //La función va a recibir un entero. Devuelve como resultado una cadena de texto que 
+  // indica si el número es positivo o negativo. 
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-
-  let signo = "Es positivo"
-
-  if (Math.sign(numero)== -1){
-    signo = "Es negativo"
-  }
-  return signo
+numero = Math.sign(numero); 
+var sigNum;
+if (numero == 1) {
+  sigNum = "Es positivo"
+} else if (numero == -1 ){
+  sigNum = "Es negativo"
+} else {
+  sigNum = false
+}
+return sigNum
 }
 
 function agregarSimboloExclamacion(str) {
@@ -206,7 +213,7 @@ function obtenerSaludo(nombre) {
   // "Martin" -> "Hola Martin!"
   // Tu código:
 
-  var saludo = "Hola"+ nombre;
+  var saludo = "Hola "+ nombre + "!";
 
   return saludo;
 }
@@ -235,7 +242,7 @@ function areaDelTriangulo(base, altura){
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
 
-  let area = (base + altura)/ 2
+  let area = (base * altura)/ 2
 
   return area 
 }
@@ -261,15 +268,15 @@ function esVocal(letra){
   //Escribe tu código aquí
   letra = letra.toLowerCase()
 
-  if (!letra.length ==1) {
+  if (letra.length > 1) {
     mensaje = "Dato incorrecto"
-  } else if (letra == a || letra == e|| letra == i || letra == o || letra == u  ){
-    mensaje = "Es vocal "
+  } else if (letra == "a" || letra == "e"|| letra == "i" || letra == "o" || letra == "u"  ){
+    mensaje = "Es vocal"
   }
-
+  
   return mensaje 
 
-}
+}; 
 
 // No modificar nada debajo de esta línea
 // --------------------------------
