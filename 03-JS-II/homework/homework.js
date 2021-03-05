@@ -34,8 +34,11 @@ function conection(status) {
 var estado = "Offline"
   switch(status){
     case 1 : estado = "Online"
+    break;
     case 2 : estado = "Away"
+    break;
     default: estado = "Offline"
+    break; 
   }
   return estado 
 }
@@ -69,7 +72,7 @@ function colors(color) {
   //En caso que el color recibido sea "orange", devuleve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
-  let mensaje
+  var mensaje
   switch(color){
     case  "blue" : mensaje = "This is blue"
         break;
@@ -79,22 +82,25 @@ function colors(color) {
     break;
     case "orange" : mensaje = "This is orange"
     break;
-
     default: mensaje = "Color not found"
-
+    break; 
 }
+return mensaje;
 }
 
 function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
-  verificar = false 
+  verificar = false; 
+  if (numero == 10 || numero == 5){
+  verificar = true; 
+  
 }
-if (numero == 10 || numero == 5){
-  verificar = true
+return verificar; 
 }
-return verificar
+
+
 
 function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
@@ -128,9 +134,9 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
 
-var respuesta 
+var respuesta = ""
 
-  if (numero % 3 == 0 && numero && 5 == 0 ){
+  if (numero % 3 == 0 && numero % 5 == 0 ){
     respuesta  = "fizzbuzz";
   }else if (numero % 3 == 0 ){
     respuesta = "fizz"
@@ -149,31 +155,23 @@ function operadoresLogicos(num1, num2, num3) {
   //Si alguno de los tres números es negativo, retornar ---> "Hay negativos"
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
-  //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
-
-  let mensaje 
-  switch (num1,num2,num3) {
-    case (num1 > (num2+mun3)) && Math.sign(num1)== +1 :
-      mensaje = "Número 1 es mayor y positivo";
-      break; 
-
-      case Math.sign(num1) == -1||  Math.sign(num2)  == -1|| Math.sign(num3) == -1 :
-      mensaje = "Hay negativos";
-      break; 
-
-      case num3 > num2 || num3 > num1 :
-      mensaje = num3 + 1
-      break;  
-      case num3 == 0 || num2 == 0 || num == 1 == 0  :
-      mensaje = "Error"; 
-      break;  
+  //Si no se cumplen ninguna de las condiciones anteriores, retornar false
+  var mensaje; 
   
-    default:
-      mensaje = false; 
-      break;
+  if( num1 == 0|| num2== 0 || num3== 0 ) {
+    mensaje = "Error"
+  } else if (Math.sign(num3) == -1 ||Math.sign(num2) == -1 ||Math.sign(num1) == -1 ){
+    mensaje = "Hay negativos"
+  } else if (num3 > num1 && num3 > num2){
+    mensaje = num3 +1
+  } else if (num1 > num2 && num1 >num3 && Math.sign(num1)== 1){
+    mensaje = "Número 1 es mayor y positivo"
+  }else {
+    mensaje = false; 
   }
+
   return mensaje; 
-}
+}; 
 
 function esPrimo(numero) {
   // Devuelve "true" si "numero" es primo
@@ -243,14 +241,14 @@ function doWhile(numero) {
   //Retornar el valor final.
   //Usar el bucle do ... while.}
 
-  contador = 7
+  contador = 8
 do {
   numero += 5 
   contador --
   
 } while (contador > 0 );
 
-
+return numero ; 
 }
 
 
