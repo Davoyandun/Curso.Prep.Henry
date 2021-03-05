@@ -28,10 +28,11 @@ function incrementarPorUno(array) {
   // y devuelve el array
   // Tu código:
   for (let i = 0; i < array.length; i++) {
-    
-    
-  }
+    var aumento = array[i] +1
+    array[i] = aumento
+    }
 
+    return array
 }
 
 
@@ -40,8 +41,8 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // y devuelve el array
   // Tu código:
 
-  const array = array.push(elemento)
-  return array
+  array.push(elemento);
+  return  array 
 }
 
 
@@ -50,9 +51,8 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
-
-  const array = array.unshift(elemento);
-  return array
+ array.unshift(elemento);
+  return array; 
 }
 
 
@@ -82,6 +82,11 @@ function agregarNumeros(numeros) {
   // "array" debe ser una matriz de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  for (let I = 0; I < numeros.length; I++) {
+    var sumatoria = numeros[I];
+    var total = total + sumatoria; 
+  }
+  return total; 
 }
 
 
