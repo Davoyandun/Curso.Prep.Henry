@@ -176,8 +176,8 @@ function mesesDelAño(array) {
   // Tu código:
   var mesesBuscados = [];
   for (let i = 0; i < array.length; i++) {
-    if (array[i] == "Enero" || array[i] == "Marzo" || array[i] == "Noviembre") {
-      mesesBuscados.push([i]);
+    if (array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre") {
+      mesesBuscados.push(array[i]);
     }
     
   }
@@ -195,10 +195,10 @@ function mayorACien(array) {
   soloMayorCien = [];
   for (let i = 0; i < array.length; i++) {
     if (array[i] > 100) {
-      soloMayorCien.push([array[i]]);
+      soloMayorCien.push(array[i]); 
     }
   }
-  return soloMayorCien;
+  return  soloMayorCien;
 }
 
 function breakStatement(numero) {
